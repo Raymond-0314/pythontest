@@ -11,12 +11,12 @@ def t():
     login = "https://cu.nsysu.edu.tw/mooc/login.php"
     index = "https://cu.nsysu.edu.tw/learn/index.php"
     calender = "https://cu.nsysu.edu.tw/learn/calender_alert.php"
-    '''
+    
     options = webdriver.ChromeOptions()
     options.add_argument('--headless')
     options.add_argument('--no-sandbox')
     options.add_argument('--disable-gpu')
-    driver = webdriver.Chrome('chromedriver',options=options)'''
+    driver = webdriver.Chrome('chromedriver',options=options)
     #driver.implicitly_wait(10)
 
 
