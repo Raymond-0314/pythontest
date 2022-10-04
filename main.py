@@ -3,7 +3,7 @@ from selenium import webdriver
 from time import sleep
 app = Flask(__name__)
 
-
+'''
 def t():
     # chromedriver位置 C:/chromedriver/chromedriver.exe
     
@@ -21,12 +21,11 @@ def t():
     driver.get(login)
 
     return driver.title
-
+'''
 
 @app.route('/')
 def hello_world():
-    a = t()
-    return 'Hello, World!' + a
+    return 'Hello, World!'
 
 if __name__ == "__main__":
     app.run()
