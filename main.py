@@ -1,6 +1,5 @@
 from flask import Flask
 from selenium import webdriver
-from time import sleep
 app = Flask(__name__)
 
 
@@ -16,19 +15,21 @@ def t():
     options = webdriver.ChromeOptions()
     options.add_argument('--headless')
     options.add_argument('--no-sandbox')
-    options.add_argument('--disable-dev-shm-usage')
+    options.add_argument('--disable-gpu')
     driver = webdriver.Chrome('chromedriver',options=options)
-    driver.implicitly_wait(10)
+    #driver.implicitly_wait(10)
 
 
-    driver.get(login)
+    #driver.get(login)
 
-    return driver.title
+    #return driver.title
+    return "ok"
 
 
 @app.route('/')
 def hello_world():
-    return t()#'Hello, World!'
+    return t()
+    #'Hello, World!'
 
 if __name__ == "__main__":
     app.run()
