@@ -7,8 +7,6 @@ app = Flask(__name__)
 def t():
     # chromedriver位置 C:/chromedriver/chromedriver.exe
     
-
-    PATH = "C:/chromedriver/chromedriver.exe"
     user_id = "B103022043"
     user_pw = "raymond8130314"
     login = "https://cu.nsysu.edu.tw/mooc/login.php"
@@ -16,8 +14,13 @@ def t():
     calender = "https://cu.nsysu.edu.tw/learn/calender_alert.php"
 
     options = webdriver.ChromeOptions()
-    options.add_experimental_option('excludeSwitches', ['enable-logging'])
-    driver = webdriver.Chrome(PATH, options=options)
+    options.add_argument('--headless')
+    options.add_argument('--no-sandbox')
+    options.add_argument('--disable-dev-shm-usage')
+    driver = webdriver.Chrome('chromedriver',options=options)
+    driver.implicitly_wait(10)
+
+
     driver.get(login)
 
     return driver.title
