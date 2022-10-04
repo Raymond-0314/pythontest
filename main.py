@@ -20,7 +20,7 @@ def t():
     #driver.implicitly_wait(10)
 
 
-    #driver.get(login)
+    driver.get(login)
 
     #return driver.title
     return "ok"
