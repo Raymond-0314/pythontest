@@ -1,3 +1,4 @@
 Flask
 Gunicorn
 Selenium
+chromium-chromedriver
